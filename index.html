@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Movie Reviews</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+body {
+    transform: scale(1);        /* 50% size */
+    transform-origin: top left;   /* scale from top-left corner */
+    
+    background: #111;
+    color: white;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Tier rows */
+.tier {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.tier-label {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+.s { background: #ff4d4d; }
+.a { background: #ffa500; }
+.b { background: #ffd700; }
+.c { background: #4caf50; }
+.tier-drop {
+    flex: 1;
+    min-height: 170px;
+    background: #222;
+    border: 2px dashed #555;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+}
+
+/* Movie pool */
+.movie-pool {
+    margin-top: 30px;
+    padding: 15px;
+    background: #1a1a1a;
+    border-radius: 10px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* Movie card */
+.movie {
+    width: 210px;
+    height: 300px;
+    background: #444;
+    border-radius: 6px;
+    cursor: grab;
+    overflow: hidden;
+}
+
+.movie img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Drag effects */
+.movie.dragging {
+    opacity: 0.4;
+}
+
+.tier-drop.over {
+    border-color: #00e5ff;
+}
+
+.tier-drop .movie {
+    width: 150px;
+    height: 200px;
+}
+</style>
+</head>
+
+<body>
+<h1>Racist Reviews by Techies</h1>
+<div class="tier">
+    <div class="tier-label c">GOATED</div>
+    <div class="tier-drop"></div>
+</div>
+
+<div class="tier">
+    <div class="tier-label b">Good</div>
+    <div class="tier-drop"></div>
+</div>
+
+<div class="tier">
+    <div class="tier-label a">One Time Watch</div>
+    <div class="tier-drop"></div>
+</div>
+
+<div class="tier">
+    <div class="tier-label s">Bad</div>
+    <div class="tier-drop"></div>
+</div>
+
+<div class="movie-pool">
+    <div class="movie" draggable="true"><img src="./movies/moive1.jpg"></div>
+    <div class="movie" draggable="true"><img src="./movies/movie2.jpg"></div>
+    <div class="movie" draggable="true"><img src="./movies/movie3.jpg"></div>
+    <div class="movie" draggable="true"><img src="./movies/movie4.jpg"></div>
+    <div class="movie" draggable="true"><img src="./movies/movie5.jpg"></div>
+    <div class="movie" draggable="true"><img src="./movies/movie6.jpg"></div>
+    <div class="movie" draggable="true"><img src="./movies/movie7.jpg"></div>
+    <div class="movie" draggable="true"><img src="./movies/movie8.jpg"></div>
+    <div class="movie" draggable="true"><img src="./movies/movie9.jpg"></div>
+    <div class="movie" draggable="true"><img src="./movies/movie10.jpg"></div>
+    <div class="movie" draggable="true"><img src="./movies/movie11.jpg"></div>
+    <div class="movie" draggable="true"><img src="./movies/movie12.jpg"></div>
+    <div class="movie" draggable="true"><img src="./movies/movie13.jpg"></div>
+    <div class="movie" draggable="true"><img src="./movies/movie14.jpg"></div>
+    <div class="movie" draggable="true"><img src="./movies/movie15.jpg"></div>
+    <div class="movie" draggable="true"><img src="./movies/movie16.jpg"></div>
+    <div class="movie" draggable="true"><img src="./movies/movie17.jpg"></div>
+    <div class="movie" draggable="true"><img src="./movies/movie18.jpg"></div>
+    <div class="movie" draggable="true"><img src="./movies/movie19.jpg"></div>
+    <div class="movie" draggable="true"><img src="./movies/movie20.jpg"></div>
+    <div class="movie" draggable="true"><img src="./movies/movie21.jpg"></div>
+    <div class="movie" draggable="true"><img src="./movies/movie22.jpg"></div>
+    <div class="movie" draggable="true"><img src="./movies/movie23.jpg"></div>
+    <div class="movie" draggable="true"><img src="./movies/movie24.jpg"></div>
+    <div class="movie" draggable="true"><img src="./movies/movie25.jpg"></div>
+    <div class="movie" draggable="true"><img src="./movies/movie26.jpg"></div>
+    <div class="movie" draggable="true"><img src="./movies/movie27.jpg"></div>
+    <div class="movie" draggable="true"><img src="./movies/movie28.jpg"></div>
+    <div class="movie" draggable="true"><img src="./movies/movie29.jpg"></div>
+    <div class="movie" draggable="true"><img src="./movies/movie30.jpg"></div>
+    <div class="movie" draggable="true"><img src="./movies/movie31.jpg"></div>
+    <div class="movie" draggable="true"><img src="./movies/movie32.jpg"></div>
+    <div class="movie" draggable="true"><img src="./movies/movie33.jpg"></div>
+    <div class="movie" draggable="true"><img src="./movies/movie34.jpg"></div>
+    <div class="movie" draggable="true"><img src="./movies/movie35.jpg"></div>
+    <div class="movie" draggable="true"><img src="./movies/movie36.jpg"></div>
+    <div class="movie" draggable="true"><img src="./movies/movie37.jpg"></div>
+    <div class="movie" draggable="true"><img src="./movies/movie38.jpg"></div>
+    <div class="movie" draggable="true"><img src="./movies/movie39.jpg"></div>
+    <div class="movie" draggable="true"><img src="./movies/movie40.jpg"></div>
+
+
+</div>
+
+<script>
+const draggableItems = document.querySelectorAll('.movie');
+const containers = document.querySelectorAll('.tier-drop, .movie-pool');
+
+let draggedItem = null;
+
+draggableItems.forEach(item => {
+    item.addEventListener('dragstart', () => {
+        draggedItem = item;
+        item.classList.add('dragging');
+    });
+
+    item.addEventListener('dragend', () => {
+        draggedItem = null;
+        item.classList.remove('dragging');
+    });
+});
+
+// Get closest movie based on mouse position (X + Y)
+function getClosestItem(container, mouseX, mouseY) {
+    const items = [...container.querySelectorAll('.movie:not(.dragging)')];
+
+    let closest = null;
+    let closestDistance = Number.POSITIVE_INFINITY;
+
+    items.forEach(item => {
+        const box = item.getBoundingClientRect();
+        const itemCenterX = box.left + box.width / 2;
+        const itemCenterY = box.top + box.height / 2;
+
+        const distance = Math.hypot(
+            mouseX - itemCenterX,
+            mouseY - itemCenterY
+        );
+
+        if (distance < closestDistance) {
+            closestDistance = distance;
+            closest = item;
+        }
+    });
+
+    return closest;
+}
+
+containers.forEach(container => {
+    container.addEventListener('dragover', e => {
+        e.preventDefault();
+        container.classList.add('over');
+
+        if (!draggedItem) return;
+
+        const closestItem = getClosestItem(container, e.clientX, e.clientY);
+
+        if (!closestItem) {
+            container.appendChild(draggedItem);
+        } else {
+            const box = closestItem.getBoundingClientRect();
+            const insertAfter =
+                e.clientY > box.top + box.height / 2 ||
+                e.clientX > box.left + box.width / 2;
+
+            if (insertAfter) {
+                closestItem.after(draggedItem);
+            } else {
+                closestItem.before(draggedItem);
+            }
+        }
+    });
+
+    container.addEventListener('dragleave', () => {
+        container.classList.remove('over');
+    });
+
+    container.addEventListener('drop', () => {
+        container.classList.remove('over');
+    });
+});
+</script>
+
+
+
+</body>
+</html>
